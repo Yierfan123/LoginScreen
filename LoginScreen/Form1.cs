@@ -14,8 +14,9 @@ namespace LoginScreen
     {
         // global variables - can be used in both 
         // button click events
+        
         string username;
-        string password;
+        int password;
 
         public Form1()
         {
@@ -24,11 +25,18 @@ namespace LoginScreen
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            username = usernameInput.Text;
-            password = passwordInput.Text;
+            try
+            {
+                username = usernameInput.Text;
+                password = Convert.ToInt32(passwordInput.Text);
 
-            // welcome the user with their name
-            outputLabel.Text = $"Welcome {username}";
+                // welcome the user with their name
+                outputLabel.Text = $"Welcome {username}";
+            }
+            catch
+            {
+                outputLabel.Text = "Whole numbers only please";
+            }
         }
 
         private void adminButton_Click(object sender, EventArgs e)
