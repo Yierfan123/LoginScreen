@@ -33,20 +33,18 @@ namespace LoginScreen
             this.passwordLabel = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
             this.outputLabel = new System.Windows.Forms.Label();
-            this.usernameInput = new System.Windows.Forms.TextBox();
-            this.passwordInput = new System.Windows.Forms.TextBox();
-            this.adminButton = new System.Windows.Forms.Button();
+            this.slicesInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(89, 35);
+            this.usernameLabel.Location = new System.Drawing.Point(32, 34);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(122, 25);
+            this.usernameLabel.Size = new System.Drawing.Size(172, 25);
             this.usernameLabel.TabIndex = 0;
-            this.usernameLabel.Text = "Username: ";
+            this.usernameLabel.Text = "Number of slices";
             // 
             // passwordLabel
             // 
@@ -54,64 +52,43 @@ namespace LoginScreen
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(93, 78);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(118, 25);
+            this.passwordLabel.Size = new System.Drawing.Size(0, 25);
             this.passwordLabel.TabIndex = 1;
-            this.passwordLabel.Text = "Password: ";
             // 
             // loginButton
             // 
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.Location = new System.Drawing.Point(110, 135);
+            this.loginButton.Location = new System.Drawing.Point(148, 123);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(101, 47);
             this.loginButton.TabIndex = 2;
-            this.loginButton.Text = "Login";
+            this.loginButton.Text = "Calculate";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // outputLabel
             // 
-            this.outputLabel.AutoSize = true;
             this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputLabel.Location = new System.Drawing.Point(33, 224);
+            this.outputLabel.Location = new System.Drawing.Point(72, 215);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(370, 24);
+            this.outputLabel.Size = new System.Drawing.Size(246, 77);
             this.outputLabel.TabIndex = 3;
-            this.outputLabel.Text = "Please enter your username and password";
+            this.outputLabel.Text = "The price of 1 slices is .25$3";
             // 
-            // usernameInput
+            // slicesInput
             // 
-            this.usernameInput.Location = new System.Drawing.Point(218, 39);
-            this.usernameInput.Name = "usernameInput";
-            this.usernameInput.Size = new System.Drawing.Size(100, 20);
-            this.usernameInput.TabIndex = 4;
-            // 
-            // passwordInput
-            // 
-            this.passwordInput.Location = new System.Drawing.Point(218, 82);
-            this.passwordInput.Name = "passwordInput";
-            this.passwordInput.Size = new System.Drawing.Size(100, 20);
-            this.passwordInput.TabIndex = 5;
-            // 
-            // adminButton
-            // 
-            this.adminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminButton.Location = new System.Drawing.Point(218, 135);
-            this.adminButton.Name = "adminButton";
-            this.adminButton.Size = new System.Drawing.Size(101, 47);
-            this.adminButton.TabIndex = 6;
-            this.adminButton.Text = "Admin";
-            this.adminButton.UseVisualStyleBackColor = true;
-            this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
+            this.slicesInput.Location = new System.Drawing.Point(218, 39);
+            this.slicesInput.Name = "slicesInput";
+            this.slicesInput.Size = new System.Drawing.Size(100, 20);
+            this.slicesInput.TabIndex = 4;
+            this.slicesInput.Tag = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 289);
-            this.Controls.Add(this.adminButton);
-            this.Controls.Add(this.passwordInput);
-            this.Controls.Add(this.usernameInput);
+            this.Controls.Add(this.slicesInput);
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordLabel);
@@ -129,9 +106,7 @@ namespace LoginScreen
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label outputLabel;
-        private System.Windows.Forms.TextBox usernameInput;
-        private System.Windows.Forms.TextBox passwordInput;
-        private System.Windows.Forms.Button adminButton;
+        private System.Windows.Forms.TextBox slicesInput;
     }
 }
 
